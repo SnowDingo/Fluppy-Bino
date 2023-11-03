@@ -1,0 +1,122 @@
+[gd_scene load_steps=12 format=3 uid="uid://bnvm4gnt7a3fk"]
+
+[ext_resource type="Texture2D" uid="uid://c65lw8ji7kpra" path="res://Glacial-mountains-parallax-background_vnitti_v3/Glacial-mountains-parallax-background_vnitti/Layers/sky.png" id="1_7vkpg"]
+[ext_resource type="Script" path="res://start.gd" id="1_d7708"]
+[ext_resource type="Texture2D" uid="uid://bnnliibbiayvc" path="res://Glacial-mountains-parallax-background_vnitti_v3/Glacial-mountains-parallax-background_vnitti/Layers/clouds_bg.png" id="2_wgagk"]
+[ext_resource type="Texture2D" uid="uid://b0oi0rff844a8" path="res://Glacial-mountains-parallax-background_vnitti_v3/Glacial-mountains-parallax-background_vnitti/Layers/clouds_mg_1.png" id="3_cwa1f"]
+[ext_resource type="Texture2D" uid="uid://bhttgrayo16lu" path="res://Glacial-mountains-parallax-background_vnitti_v3/Glacial-mountains-parallax-background_vnitti/Layers/clouds_mg_1_lightened.png" id="4_rvjqf"]
+[ext_resource type="Texture2D" uid="uid://bi0a88fdku0wl" path="res://Glacial-mountains-parallax-background_vnitti_v3/Glacial-mountains-parallax-background_vnitti/Layers/clouds_mg_3.png" id="5_lv162"]
+[ext_resource type="Texture2D" uid="uid://tfupod4mmk7e" path="res://Glacial-mountains-parallax-background_vnitti_v3/Glacial-mountains-parallax-background_vnitti/Layers/cloud_lonely.png" id="6_kwc1d"]
+[ext_resource type="Texture2D" uid="uid://cf1426iexs4ty" path="res://Glacial-mountains-parallax-background_vnitti_v3/Glacial-mountains-parallax-background_vnitti/Layers/glacial_mountains.png" id="7_ve3bc"]
+[ext_resource type="Texture2D" uid="uid://c2bs0iyvjsta" path="res://Glacial-mountains-parallax-background_vnitti_v3/Glacial-mountains-parallax-background_vnitti/Layers/glacial_mountains_lightened.png" id="8_xfena"]
+[ext_resource type="FontFile" uid="uid://cotp0g7biesbv" path="res://DungeonFont.ttf" id="9_0co60"]
+[ext_resource type="Texture2D" uid="uid://bjn8olvism4ax" path="res://start.tres" id="10_frewr"]
+
+[node name="Start" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_d7708")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+
+[node name="7" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+texture_filter = 1
+position = Vector2(189, 108)
+motion_mirroring = Vector2(384, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/7"]
+texture = ExtResource("1_7vkpg")
+
+[node name="0" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+texture_filter = 1
+position = Vector2(189, 108)
+motion_mirroring = Vector2(384, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/0"]
+texture = ExtResource("2_wgagk")
+
+[node name="1" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+texture_filter = 1
+position = Vector2(189, 108)
+motion_mirroring = Vector2(384, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/1"]
+texture = ExtResource("3_cwa1f")
+
+[node name="2" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+texture_filter = 1
+position = Vector2(189, 108)
+motion_mirroring = Vector2(384, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/2"]
+texture = ExtResource("4_rvjqf")
+
+[node name="3" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+texture_filter = 1
+position = Vector2(189, 108)
+motion_mirroring = Vector2(384, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/3"]
+texture = ExtResource("5_lv162")
+
+[node name="4" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+texture_filter = 1
+position = Vector2(189, 108)
+motion_mirroring = Vector2(384, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/4"]
+texture = ExtResource("6_kwc1d")
+
+[node name="5" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+texture_filter = 1
+position = Vector2(189, 108)
+motion_mirroring = Vector2(384, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/5"]
+texture = ExtResource("7_ve3bc")
+
+[node name="6" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+texture_filter = 1
+position = Vector2(189, 108)
+motion_mirroring = Vector2(384, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/6"]
+texture = ExtResource("8_xfena")
+
+[node name="Label" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -38.0
+offset_top = 23.0
+offset_right = 38.0
+offset_bottom = 46.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("9_0co60")
+text = "Fluppy Bino"
+
+[node name="TextureButton" type="TextureButton" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = 168.0
+offset_top = 107.0
+offset_right = 208.0
+offset_bottom = 147.0
+scale = Vector2(2.59223, 2.59223)
+texture_normal = ExtResource("10_frewr")
+texture_pressed = ExtResource("10_frewr")
+texture_hover = ExtResource("10_frewr")
+texture_disabled = ExtResource("10_frewr")
+texture_focused = ExtResource("10_frewr")
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_texture_button_pressed"]

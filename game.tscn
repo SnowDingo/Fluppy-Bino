@@ -1,0 +1,159 @@
+[gd_scene load_steps=15 format=3 uid="uid://dgag0uj45my82"]
+
+[ext_resource type="Script" path="res://game.gd" id="1_mkwx7"]
+[ext_resource type="Texture2D" uid="uid://c65lw8ji7kpra" path="res://Glacial-mountains-parallax-background_vnitti_v3/Glacial-mountains-parallax-background_vnitti/Layers/sky.png" id="1_odf5o"]
+[ext_resource type="PackedScene" uid="uid://b3epve4m67yu5" path="res://bino.tscn" id="1_wa5ie"]
+[ext_resource type="Texture2D" uid="uid://bnnliibbiayvc" path="res://Glacial-mountains-parallax-background_vnitti_v3/Glacial-mountains-parallax-background_vnitti/Layers/clouds_bg.png" id="2_g4hmb"]
+[ext_resource type="Texture2D" uid="uid://b0oi0rff844a8" path="res://Glacial-mountains-parallax-background_vnitti_v3/Glacial-mountains-parallax-background_vnitti/Layers/clouds_mg_1.png" id="2_qpg0k"]
+[ext_resource type="Texture2D" uid="uid://bhttgrayo16lu" path="res://Glacial-mountains-parallax-background_vnitti_v3/Glacial-mountains-parallax-background_vnitti/Layers/clouds_mg_1_lightened.png" id="3_rbt3i"]
+[ext_resource type="Texture2D" uid="uid://bi0a88fdku0wl" path="res://Glacial-mountains-parallax-background_vnitti_v3/Glacial-mountains-parallax-background_vnitti/Layers/clouds_mg_3.png" id="4_cgrjr"]
+[ext_resource type="Texture2D" uid="uid://tfupod4mmk7e" path="res://Glacial-mountains-parallax-background_vnitti_v3/Glacial-mountains-parallax-background_vnitti/Layers/cloud_lonely.png" id="5_js0gp"]
+[ext_resource type="Texture2D" uid="uid://cf1426iexs4ty" path="res://Glacial-mountains-parallax-background_vnitti_v3/Glacial-mountains-parallax-background_vnitti/Layers/glacial_mountains.png" id="6_xqqfh"]
+[ext_resource type="Texture2D" uid="uid://c2bs0iyvjsta" path="res://Glacial-mountains-parallax-background_vnitti_v3/Glacial-mountains-parallax-background_vnitti/Layers/glacial_mountains_lightened.png" id="7_ucgih"]
+[ext_resource type="FontFile" uid="uid://cotp0g7biesbv" path="res://DungeonFont.ttf" id="11_m04uu"]
+[ext_resource type="Texture2D" uid="uid://b1bh0qmpbka4g" path="res://button UI.png" id="12_xx561"]
+[ext_resource type="Script" path="res://play.gd" id="13_5883c"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dhhv2"]
+atlas = ExtResource("12_xx561")
+region = Rect2(15.2222, 143.667, 17.3333, 17.3333)
+
+[node name="Game" type="Node2D"]
+process_mode = 3
+texture_filter = 1
+script = ExtResource("1_mkwx7")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ParallaxBackground" type="ParallaxBackground" parent="CanvasLayer"]
+
+[node name="7" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+texture_filter = 1
+position = Vector2(189, 108)
+motion_mirroring = Vector2(384, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/7"]
+texture = ExtResource("1_odf5o")
+
+[node name="0" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+texture_filter = 1
+position = Vector2(189, 108)
+motion_mirroring = Vector2(384, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/0"]
+texture = ExtResource("2_g4hmb")
+
+[node name="1" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+texture_filter = 1
+position = Vector2(189, 108)
+motion_mirroring = Vector2(384, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/1"]
+texture = ExtResource("2_qpg0k")
+
+[node name="2" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+texture_filter = 1
+position = Vector2(189, 108)
+motion_mirroring = Vector2(384, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/2"]
+texture = ExtResource("3_rbt3i")
+
+[node name="3" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+texture_filter = 1
+position = Vector2(189, 108)
+motion_mirroring = Vector2(384, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/3"]
+texture = ExtResource("4_cgrjr")
+
+[node name="4" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+texture_filter = 1
+position = Vector2(189, 108)
+motion_mirroring = Vector2(384, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/4"]
+texture = ExtResource("5_js0gp")
+
+[node name="5" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+texture_filter = 1
+position = Vector2(189, 108)
+motion_mirroring = Vector2(384, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/5"]
+texture = ExtResource("6_xqqfh")
+
+[node name="6" type="ParallaxLayer" parent="CanvasLayer/ParallaxBackground"]
+texture_filter = 1
+position = Vector2(189, 108)
+motion_mirroring = Vector2(384, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="CanvasLayer/ParallaxBackground/6"]
+texture = ExtResource("7_ucgih")
+
+[node name="Bino" parent="." instance=ExtResource("1_wa5ie")]
+position = Vector2(49, 48)
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="score" type="Label" parent="Control"]
+layout_mode = 0
+offset_left = 334.0
+offset_top = 1.0
+offset_right = 374.0
+offset_bottom = 24.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("11_m04uu")
+theme_override_font_sizes/font_size = 32
+text = "0"
+horizontal_alignment = 2
+
+[node name="gameover" type="Label" parent="Control"]
+process_mode = 3
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = 104.0
+offset_top = 68.0
+offset_right = 230.0
+offset_bottom = 104.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_fonts/font = ExtResource("11_m04uu")
+theme_override_font_sizes/font_size = 32
+text = "game over"
+horizontal_alignment = 1
+
+[node name="play" type="TextureButton" parent="Control"]
+visible = false
+texture_filter = 1
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 4.25
+anchor_top = 3.475
+anchor_right = 5.25
+anchor_bottom = 4.475
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(2.44, 2.44)
+texture_normal = SubResource("AtlasTexture_dhhv2")
+texture_pressed = SubResource("AtlasTexture_dhhv2")
+texture_hover = SubResource("AtlasTexture_dhhv2")
+texture_disabled = SubResource("AtlasTexture_dhhv2")
+texture_focused = SubResource("AtlasTexture_dhhv2")
+script = ExtResource("13_5883c")
+metadata/_edit_use_anchors_ = true
+
+[connection signal="gameover" from="Bino" to="." method="_on_bino_gameover"]
+[connection signal="pressed" from="Control/play" to="." method="_on_play_pressed"]

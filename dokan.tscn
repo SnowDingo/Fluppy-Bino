@@ -1,0 +1,21 @@
+[gd_scene load_steps=4 format=3 uid="uid://dcv6hkj2qffp2"]
+
+[ext_resource type="Script" path="res://dokan.gd" id="1_g66cw"]
+[ext_resource type="Texture2D" uid="uid://ca2h7h8e25nuw" path="res://New Piskel (11).png" id="2_7ttpo"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kxfsm"]
+size = Vector2(15, 18)
+
+[node name="Dokan" type="StaticBody2D"]
+position = Vector2(24, 58)
+scale = Vector2(3, 3)
+script = ExtResource("1_g66cw")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(0, -7)
+texture = ExtResource("2_7ttpo")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, -10)
+shape = SubResource("RectangleShape2D_kxfsm")
